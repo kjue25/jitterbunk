@@ -1,0 +1,12 @@
+<h1>Jitterbunk Feed</h1>
+{% if bunks %}
+		{% for bunk in bunks %}
+				<!-- did not get images working yet -->
+				<img src="{{bunk.from_user.photo}}">
+				{{bunk.from_user.photo}}
+				{{bunk}}
+				<br/>
+		{% endfor %}
+{% else %}
+	<p>No one's been bunked!</p>
+{% endif %}

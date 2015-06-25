@@ -1,0 +1,6 @@
+<h2>Bunk a friend</h2>
+<form method="post" action="">
+	{% csrf_token %} 
+	{{formset}}
+	<input type="submit" value="BUNK!"/>
+</form>
