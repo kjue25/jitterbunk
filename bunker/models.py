@@ -6,7 +6,7 @@ from django.utils import timezone
 class Bunk(models.Model):
 	from_user = models.ForeignKey(User, related_name="from")
 	to_user = models.ForeignKey(User, related_name="to")
-	time = models.DateTimeField('bunk time', default=timezone.now())
+	time = models.DateTimeField('bunk time', auto_now_add=True)
 	def __unicode__(self):
 		bunk_str = self.from_user.username +  " bunked " + self.to_user.username
 		return bunk_str 
