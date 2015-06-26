@@ -1,10 +1,8 @@
 <h1>{{profile.user.first_name}}'s Feed</h1>
-	{% if personal_bunks %}
-		<ul>
-			{% for bunk in personal_bunks %}
-				<li>{{bunk}}</li>
-			{% endfor %}
-		</ul>
-	{% else %}
-		<p>{{profile.user.first_name}} hasn't bunked anyone yet.</p>
-	{% endif %}
+	<ul>
+		{% for bunk in personal_bunks %}
+			<li>{{bunk}}</li>
+		{% empty %}
+			<p>{{profile.user.first_name}} hasn't bunked anyone yet.</p>
+		{% endfor %}
+	</ul>
